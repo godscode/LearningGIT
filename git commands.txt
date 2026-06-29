@@ -1,0 +1,78 @@
+PS D:\godscode\2026\BMN\LearningGIT> git -v
+git version 2.39.2.windows.1
+PS D:\godscode\2026\BMN\LearningGIT> git config --global color.diff auto
+PS D:\godscode\2026\BMN\LearningGIT> git config --global color.status auto
+PS D:\godscode\2026\BMN\LearningGIT> git config --global color.branch auto
+PS D:\godscode\2026\BMN\LearningGIT> git conifg --global merge.tool vscode
+PS D:\godscode\2026\BMN\LearningGIT> git config --global merge.tool vscode
+PS D:\godscode\2026\BMN\LearningGIT> git config --global mergetool.vscode.cmd "code --wait $MERGED"
+PS D:\godscode\2026\BMN\LearningGIT> git config --global mergetool.keepBackup false
+PS D:\godscode\2026\BMN\LearningGIT> git mergetool
+fatal: not a git repository (or any of the parent directories): .git
+PS D:\godscode\2026\BMN\LearningGIT> git config --global diff.tool vscode
+PS D:\godscode\2026\BMN\LearningGIT> git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+PS D:\godscode\2026\BMN\LearningGIT> git config --global color.ui auto
+
+git branch -M origin (-M : force rename of branch to "origin")
+
+git push -u origin main
+
+git push origin main
+
+git branch
+git branch newBranch
+git checkout newBranch
+
+touch branch.txt
+
+git add branch.txt
+
+git commit -m "Added a new feature on frontend"
+
+git push -u origin newBranch
+
+
+then u need to go back to main so that u can merge the branch
+
+git checkout main
+
+git merge newBranch
+
+
+Now for the changes to appear on main, you only need to push
+
+git push
+
+
+
+MANAGE Mistakes
+
+--Deleting branch locally----
+git branch testBranch
+git branch -d textBranch
+
+
+git branch -D testBranch - This deletes the branch and all the changes made in the branch
+
+
+--Deleting branch on remote GitHub repo ----
+
+git push origin --delete frontend
+
+-- Before you committed You can save or stash change somewhere and deploy then to other branchs before you commit ---
+
+git stash OR git stash push -m "message or name"
+
+--then maybe checkout to other branch, then
+
+git stash list
+
+git stash apply [the name of stash you want]\\
+
+
+
+
+git checkout main
+git pull origin main
+git merge godscode
+git push origin main
